@@ -1,0 +1,184 @@
+{
+    "timestamp": "2026-07-08T14:43:59.172997",
+    "seed": 42,
+    "hyperparameters": {
+        "batch_size": 32,
+        "img_size": 224,
+        "val_split": 0.2,
+        "phase1": {
+            "lr": 0.001,
+            "epochs": 5,
+            "backbone_frozen": true
+        },
+        "phase2": {
+            "lr": 0.0001,
+            "epochs": 8,
+            "backbone_frozen": false,
+            "discriminative_lr": true
+        },
+        "class_weighted_loss": true,
+        "optimizer": "Adam",
+        "scheduler_phase1": "StepLR(step_size=3, gamma=0.1)",
+        "scheduler_phase2": "CosineAnnealingLR(T_max=8)"
+    },
+    "dataset": {
+        "name": "PlantVillage",
+        "source": "Kaggle (emmarex/plantdisease)",
+        "total_images": 20638,
+        "num_classes": 15,
+        "train_samples": 16511,
+        "val_samples": 4127,
+        "class_imbalance_ratio": 21.105263157894736
+    },
+    "best_val_acc": 0.9966077053549794,
+    "final_metrics": {
+        "val_acc": 0.9966077053549794,
+        "val_f1": 0.9966080504776701,
+        "val_loss": 0.00690746653535854
+    },
+    "history": {
+        "phase1": [
+            {
+                "epoch": 1,
+                "train_loss": 0.600359894525246,
+                "train_acc": 0.7362364484283205,
+                "val_loss": 0.2477060024165518,
+                "val_acc": 0.8929004119214926,
+                "val_f1": 0.8899197517344811,
+                "time_sec": 77.84647297859192
+            },
+            {
+                "epoch": 2,
+                "train_loss": 0.2678675464435173,
+                "train_acc": 0.8746290351886621,
+                "val_loss": 0.17141329964317303,
+                "val_acc": 0.9149503271141265,
+                "val_f1": 0.9134151581867789,
+                "time_sec": 66.47314167022705
+            },
+            {
+                "epoch": 3,
+                "train_loss": 0.21520212833629113,
+                "train_acc": 0.8935255284355884,
+                "val_loss": 0.15159066919772654,
+                "val_acc": 0.9205233826023747,
+                "val_f1": 0.9194870908098649,
+                "time_sec": 64.97468876838684
+            },
+            {
+                "epoch": 4,
+                "train_loss": 0.19169752812585553,
+                "train_acc": 0.9087880806734904,
+                "val_loss": 0.14134495940961184,
+                "val_acc": 0.9256118245699055,
+                "val_f1": 0.9243357422752926,
+                "time_sec": 63.86830234527588
+            },
+            {
+                "epoch": 5,
+                "train_loss": 0.1900991973425487,
+                "train_acc": 0.9073950699533644,
+                "val_loss": 0.146533448242783,
+                "val_acc": 0.9258541313302641,
+                "val_f1": 0.9245974824707271,
+                "time_sec": 64.45074892044067
+            }
+        ],
+        "phase2": [
+            {
+                "epoch": 1,
+                "train_loss": 0.09111239223314958,
+                "train_acc": 0.9534249894010054,
+                "val_loss": 0.024754629555935284,
+                "val_acc": 0.9852192876181245,
+                "val_f1": 0.9852448631378586,
+                "time_sec": 100.01846027374268
+            },
+            {
+                "epoch": 2,
+                "train_loss": 0.029467362146543694,
+                "train_acc": 0.9856459330143541,
+                "val_loss": 0.014444420298754172,
+                "val_acc": 0.9912769566270899,
+                "val_f1": 0.9912730278826319,
+                "time_sec": 100.34139966964722
+            },
+            {
+                "epoch": 3,
+                "train_loss": 0.016495653393687224,
+                "train_acc": 0.9927926836654352,
+                "val_loss": 0.013328573160457508,
+                "val_acc": 0.9927307971892416,
+                "val_f1": 0.9927367156717483,
+                "time_sec": 100.44252920150757
+            },
+            {
+                "epoch": 4,
+                "train_loss": 0.01002580936302979,
+                "train_acc": 0.9950336139543334,
+                "val_loss": 0.010083805771233382,
+                "val_acc": 0.9949115580324691,
+                "val_f1": 0.9949051377795659,
+                "time_sec": 98.76094889640808
+            },
+            {
+                "epoch": 5,
+                "train_loss": 0.00554223522865507,
+                "train_acc": 0.9973956756101993,
+                "val_loss": 0.012665026870673297,
+                "val_acc": 0.9944269445117518,
+                "val_f1": 0.9944227812755462,
+                "time_sec": 100.39508175849915
+            },
+            {
+                "epoch": 6,
+                "train_loss": 0.005066372911962561,
+                "train_acc": 0.9978802010780692,
+                "val_loss": 0.008502600021333226,
+                "val_acc": 0.9966077053549794,
+                "val_f1": 0.99661006602706,
+                "time_sec": 100.3681161403656
+            },
+            {
+                "epoch": 7,
+                "train_loss": 0.0038529525585394744,
+                "train_acc": 0.9981830294954879,
+                "val_loss": 0.009103362505804402,
+                "val_acc": 0.9956384783135449,
+                "val_f1": 0.995638046238164,
+                "time_sec": 100.42718744277954
+            },
+            {
+                "epoch": 8,
+                "train_loss": 0.0037054079465777927,
+                "train_acc": 0.9983647265459391,
+                "val_loss": 0.00690746653535854,
+                "val_acc": 0.9966077053549794,
+                "val_f1": 0.9966080504776701,
+                "time_sec": 99.07000637054443
+            }
+        ]
+    },
+    "worst_classes": [
+        {
+            "class": "Tomato__Target_Spot",
+            "f1": 0.9825918762088974
+        },
+        {
+            "class": "Tomato_Early_blight",
+            "f1": 0.9873417721518988
+        },
+        {
+            "class": "Tomato_Spider_mites_Two_spotted_spider_mite",
+            "f1": 0.9925705794947994
+        },
+        {
+            "class": "Tomato_Late_blight",
+            "f1": 0.993103448275862
+        },
+        {
+            "class": "Pepper__bell___healthy",
+            "f1": 0.996742671009772
+        }
+    ]
+}

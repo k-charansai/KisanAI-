@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overlayImage {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--primary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.diseaseName {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badgeHealthy {
+  background-color: var(--primary);
+}
+
+.badgeSick {
+  background-color: var(--accent);
+}

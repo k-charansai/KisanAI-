@@ -1,0 +1,36 @@
+.uploadZone {
+  border: 2px dashed #15803D;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+.uploadZone:hover, .dragActive {
+  background-color: #f0fdf4;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.uploadPrompt p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.muted {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: contain;
+}
