@@ -5,6 +5,11 @@ An AI-powered crop disease diagnosis and advisory tool. Built as a portfolio pro
 ![KisanAI Demo](docs/demo.gif)
 *(Note: Replace this placeholder with a recorded demo of the Vercel frontend in action)*
 
+## 🚀 Live Demo
+- **Frontend (Vercel)**: [https://kisanai-nu.vercel.app/](https://kisan-ai-one.vercel.app/) *(Note: replace with your actual Vercel URL)*
+- **API (Render)**: [https://kisanai-ea2y.onrender.com/docs](https://kisanai-ea2y.onrender.com/docs)
+*(Note: First API request may take ~50 seconds due to Render's free tier cold starts)*
+
 ## What It Does
 1. **Diagnose**: Upload a photo of a plant leaf. The system identifies the disease using an EfficientNet-B0 vision model and highlights the affected regions via Grad-CAM.
 2. **Advise**: An intelligent LangGraph agent generates a customized treatment plan, pulling real-time local weather context and retrieving domain-specific treatments from a local FAISS index.
@@ -21,12 +26,26 @@ See the detailed [Architecture Diagram](docs/architecture.md) for the complete f
 ## Honest Metrics & Field Validation
 This project was evaluated on the **PlantVillage** dataset (lab conditions) and field-validated on the **PlantDoc** dataset (real-world conditions) to demonstrate the domain shift challenge.
 
+### 1. PlantVillage (Lab Conditions)
+The model was trained over 13 epochs (5 frozen, 8 unfrozen) using class-weighted loss to counter significant dataset imbalances (e.g., 3,208 Tomato yellow leaf curl images vs. 152 Tomato early blight images).
+
+| Metric | Value |
+| --- | --- |
+| **Final Accuracy** | `99.66%` |
+| **Final F1 Score** | `0.9966` |
+| **Validation Loss** | `0.0069` |
+
+**Areas of Weakness (Worst Classes by F1):**
+- *Tomato Target Spot* (98.26%)
+- *Tomato Early Blight* (98.73%)
+- *Tomato Spider Mites* (99.25%)
+
+### 2. PlantDoc (Field Conditions)
 | Dataset | Accuracy | Condition |
 | --- | --- | --- |
-| **PlantVillage** | `99.66%` | Controlled lab environments. |
 | **PlantDoc** | `Pending` | Real-world field evaluation pending. |
 
-**Observation:** As documented in `docs/model_metrics.md`, the model achieves exceptional 99.66% accuracy on the lab-controlled PlantVillage dataset. Field validation on PlantDoc is pending, but an accuracy drop is expected.
+**Observation:** As documented in `docs/model_metrics.md`, the model achieves exceptional 99.66% accuracy on the lab-controlled PlantVillage dataset. Field validation on PlantDoc is pending, but a significant accuracy drop (normal for domain shift) is expected.
 
 ## Deployment Constraints
 - **Render Free Tier**: The backend is hosted on a free Render tier, which spins down after 15 minutes of inactivity. The first API request may take ~50 seconds to cold-start.
