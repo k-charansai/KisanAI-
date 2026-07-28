@@ -164,7 +164,7 @@ export default function LandingPage() {
         <p>Upload a photo of an infected leaf for an instant diagnosis.</p>
       </div>
 
-      <div className="upload-area" id="uploadArea">
+      <div className="upload-area" id="uploadArea" onClick={() => navigate('/diagnose')} style={{ cursor: 'pointer' }}>
         {/*  Default state  */}
         <div className="upload-default" id="uploadDefault">
           <div className="upload-illustration">
