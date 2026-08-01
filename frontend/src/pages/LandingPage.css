@@ -80,7 +80,7 @@
     }
 
     section {
-      padding: 7rem 0;
+      padding: 4rem 0;
     }
 
     /* ==========================================
@@ -651,6 +651,17 @@
       text-align: center;
       position: relative;
       z-index: 1;
+      background: linear-gradient(145deg, var(--white), var(--green-50));
+      padding: 2.5rem 1.5rem;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--green-100);
+      transition: all 0.4s ease;
+    }
+    .step:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--green-300);
     }
 
     .step-num {
@@ -1455,6 +1466,6 @@
 
     @media (max-width: 600px) {
       .features-grid { grid-template-columns: 1fr; }
-      section { padding: 5rem 0; }
+      section { padding: 3rem 0; }
     }
   
