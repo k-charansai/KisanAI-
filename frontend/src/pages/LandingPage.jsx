@@ -106,14 +106,14 @@ export default function LandingPage() {
     <div className="container">
       <div className="gallery-grid">
         <div className="gallery-item fade-up">
-          <img src="images/farmers-rice-field.jpg" alt="Farmers transplanting rice seedlings in a paddy field" />
+          <img src={riceImg} alt="Farmers transplanting rice seedlings in a paddy field" />
           <div className="gallery-caption">
             <div className="gallery-caption-eyebrow">In the field</div>
             <h4>Built alongside the people who work the land</h4>
           </div>
         </div>
         <div className="gallery-item fade-up d1">
-          <img src="images/farmer-planting-seedling.jpg" alt="Hands cupping soil around a young plant seedling" />
+          <img src={farmerImg} alt="Hands cupping soil around a young plant seedling" />
           <div className="gallery-caption">
             <div className="gallery-caption-eyebrow">Growing forward</div>
             <h4>Every scan starts with a seed worth protecting</h4>
