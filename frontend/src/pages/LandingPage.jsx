@@ -19,7 +19,7 @@ export default function LandingPage() {
       <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`} id="nav">
         <div className="nav-inner">
           <a onClick={() => navigate('/diagnose')} className="nav-logo">
-            <div className="nav-logo-mark">></div>
+            <div className="nav-logo-mark">&gt;</div>
             <span className="nav-logo-text">KisanAI</span>
           </a>
           <ul className="nav-links" id="navLinks">
@@ -29,7 +29,7 @@ export default function LandingPage() {
             <li><a href="#scan" className="nav-cta">Try Free</a></li>
           </ul>
           <button className="mobile-menu-btn" id="menuBtn" onClick={toggleMenu}>
-            <i className={isMenuOpen ? 'fas fa-times' : 'fas fa-bars'></i>}
+            <i className={isMenuOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
           </button>
         </div>
       </nav>
