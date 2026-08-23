@@ -4,6 +4,148 @@
   background-color: var(--bg);
 }
 
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 96px 5%;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8FBC8F;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #8FBC8F;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #2D3748;
+}
+
+.hero-desc {
+  font-size: 1.125rem;
+  color: #4A5568;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-dark {
+  background-color: #2D3748;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-dark:hover {
+  background-color: #1A202C;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid #2D3748;
+  color: #2D3748;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-outline:hover {
+  background-color: rgba(45, 55, 72, 0.05);
+  transform: translateY(-2px);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.hero-stat-val {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8FBC8F;
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin-top: 0.5rem;
+}
+
+/* Hero Visual */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-leaf-placeholder {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(143, 188, 143, 0.2);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Navbar Styles */
 .navbar {
   position: sticky;
   top: 0;
@@ -42,81 +184,11 @@
   font-weight: 500;
 }
 
+/* Section Styles */
 .section {
   padding: 100px 5%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Hero */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.eyebrow {
-  color: var(--green);
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-  display: block;
-}
-
-.heroTitle {
-  font-size: 56px;
-  line-height: 1.1;
-  margin-bottom: 24px;
-}
-
-.heroDesc {
-  font-size: 18px;
-  color: var(--text-muted);
-  margin-bottom: 40px;
-  max-width: 480px;
-}
-
-.heroBtns {
-  display: flex;
-  gap: 16px;
-}
-
-.btnPrimary {
-  background-color: var(--green-dark);
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-.btnSecondary {
-  background-color: transparent;
-  color: var(--text);
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  border: 1px solid var(--border);
-  cursor: pointer;
-}
-
-.heroRight {
-  background-color: var(--bg-dark);
-  border-radius: 24px;
-  padding: 64px 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 /* Diagnose Card */
@@ -129,6 +201,7 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
+/* Upload Zone */
 .uploadZone {
   border: 2px dashed var(--border);
   border-radius: 12px;
@@ -164,12 +237,14 @@
   border-top: 1px solid var(--border);
 }
 
+/* Disease Name */
 .diseaseName {
   font-size: 18px;
   color: var(--green-dark);
   margin-bottom: 16px;
 }
 
+/* Confidence Wrapper */
 .confidenceWrap {
   margin-bottom: 20px;
 }
@@ -194,6 +269,7 @@
   background-color: var(--green);
 }
 
+/* Step Item */
 .stepItem {
   display: flex;
   gap: 12px;
@@ -208,6 +284,7 @@
   margin-top: 2px;
 }
 
+/* Cost Wrapper */
 .costWrap {
   background-color: var(--green-light);
   padding: 12px;
@@ -265,9 +342,13 @@
 
 .featureCell {
   padding: 48px;
-  border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #F0F0F0;
 }
 
 .featureCell:nth-child(2n) {
@@ -279,13 +360,33 @@
 }
 
 .featureIcon {
-  color: var(--accent);
-  margin-bottom: 24px;
+  width: 3rem;
+  height: 3rem;
+  background-color: #E2E8F0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
-.featureTitle {
-  font-size: 20px;
-  margin-bottom: 12px;
+.featureIcon:hover {
+  transform: scale(1.1) rotate(5deg);
+  background-color: #BBDEFb;
+}
+
+.featureCell h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2D3748;
+}
+
+.featureCell p {
+  color: #4A5568;
+  line-height: 1.7;
 }
 
 /* How It Works */
@@ -311,30 +412,121 @@
 }
 
 .stepNum {
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border: 1px solid var(--border);
+  width: 3rem;
+  height: 3rem;
+  background-color: #8FBC8F;
+  color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  color: var(--green-dark);
-  font-weight: 600;
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 2;
+  justify-center: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .stepLine {
   position: absolute;
-  top: 20px;
-  left: 40px;
-  width: calc(100% - 8px);
+  top: 1.5rem;
+  left: 3rem;
+  width: calc(100% - 6px);
   height: 1px;
   background-color: var(--border);
   z-index: 1;
+}
+
+.stepIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.howStep h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  color: #2D3748;
+}
+
+.howStep p {
+  color: #4A5568;
+  line-height: 1.6;
+}
+
+/* Step Progress */
+.step-progress {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #E2E8F0;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 3px solid transparent;
+  border-top-color: #8FBC8F;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+/* Water filling animation for progress */
+.step:nth-child(1) .progress-circle::before {
+  border-top-color: #8FBC8F;
+  animation: waterFill1 2s ease-in-out infinite;
+}
+
+.step:nth-child(2) .progress-circle::before {
+  border-top-color: #E27D60;
+  animation: waterFill2 2s ease-in-out infinite;
+}
+
+.step:nth-child(3) .progress-circle::before {
+  border-top-color: #FDD835;
+  animation: waterFill3 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes waterFill1 {
+  0%, 100% { 
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 0%);
+  }
+  50% { 
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 0% 0%);
+  }
+}
+
+@keyframes waterFill2 {
+  0%, 100% { 
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 0%);
+  }
+  50% { 
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 0%);
+  }
+}
+
+@keyframes waterFill3 {
+  0%, 100% { 
+    clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 50%, 0% 0%);
+  }
+  50% { 
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 50%, 0% 0%);
+  }
 }
 
 /* Farmer Section */
@@ -402,6 +594,7 @@
   text-align: center;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero, .farmerSection, .featuresGrid {
     grid-template-columns: 1fr;

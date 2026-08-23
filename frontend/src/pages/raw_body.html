@@ -1,0 +1,640 @@
+
+
+  <!-- Navbar -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-mark">🌱</div>
+        <span class="nav-logo-text">KisanAI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#scan">Scan Crop</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#scan" class="nav-cta">Try Free</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          AI-Powered Crop Diagnosis
+        </div>
+        <h1>Know what's wrong with your crop — <em>instantly</em></h1>
+        <p class="hero-desc">
+          Take a photo of any infected leaf. KisanAI identifies the disease and gives you clear, actionable treatment advice in seconds.
+        </p>
+        <div class="hero-actions">
+          <a href="#scan" class="btn btn-dark"><i class="fas fa-camera"></i> Scan a Crop</a>
+          <a href="#how" class="btn btn-outline"><i class="fas fa-play"></i> How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-val" data-count="50">0</div>
+            <div class="hero-stat-label">Diseases detected</div>
+          </div>
+          <div>
+            <div class="hero-stat-val" data-count="98" data-suffix="%">0</div>
+            <div class="hero-stat-label">Accuracy rate</div>
+          </div>
+          <div>
+            <div class="hero-stat-val" data-count="10" data-suffix="s">0</div>
+            <div class="hero-stat-label">Avg scan time</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-phone">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span class="phone-header-dot"></span>
+              <span>KisanAI</span>
+            </div>
+            <div class="phone-image-box">🍃</div>
+            <div class="phone-result">
+              <div class="phone-result-top">
+                <span class="phone-result-disease">Leaf Blight Detected</span>
+                <span class="phone-result-badge">94%</span>
+              </div>
+              <div style="font-size:0.75rem;color:#6b7280;margin-bottom:0.25rem;">Confidence Score</div>
+              <div class="phone-result-bar">
+                <div class="phone-result-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="float-card float-card-1">
+          <div class="float-card-icon green"><i class="fas fa-check"></i></div>
+          <div>
+            <div style="font-size:0.7rem;color:var(--stone-400);">Treatment</div>
+            <div>Mancozeb 75% WP</div>
+          </div>
+        </div>
+
+        <div class="float-card float-card-2">
+          <div class="float-card-icon amber"><i class="fas fa-exclamation-triangle"></i></div>
+          <div>
+            <div style="font-size:0.7rem;color:var(--stone-400);">Severity</div>
+            <div>High — Act Now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item fade-up">
+          <img src="images/farmers-rice-field.jpg" alt="Farmers transplanting rice seedlings in a paddy field">
+          <div class="gallery-caption">
+            <div class="gallery-caption-eyebrow">In the field</div>
+            <h4>Built alongside the people who work the land</h4>
+          </div>
+        </div>
+        <div class="gallery-item fade-up d1">
+          <img src="images/farmer-planting-seedling.jpg" alt="Hands cupping soil around a young plant seedling">
+          <div class="gallery-caption">
+            <div class="gallery-caption-eyebrow">Growing forward</div>
+            <h4>Every scan starts with a seed worth protecting</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">How It Works</div>
+        <h2>Three steps. Ten seconds.</h2>
+        <p>No jargon, no appointments. Just snap, scan, and act.</p>
+      </div>
+
+      <div class="steps-row">
+        <div class="step fade-up">
+          <div class="step-num">1</div>
+          <div class="step-icon-wrap">📸</div>
+          <h3>Take a Photo</h3>
+          <p>Point your camera at the infected leaf or stem. Works best in natural light.</p>
+        </div>
+        <div class="step fade-up d1">
+          <div class="step-num">2</div>
+          <div class="step-icon-wrap">🔍</div>
+          <h3>Let AI Analyze</h3>
+          <p>Our model scans the image for disease patterns, spots, and discoloration.</p>
+        </div>
+        <div class="step fade-up d2">
+          <div class="step-num">3</div>
+          <div class="step-icon-wrap">💊</div>
+          <h3>Get a Plan</h3>
+          <p>Receive specific treatment, prevention, and care instructions you can follow today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scan Section -->
+  <section class="scan-section" id="scan">
+    <div class="container-narrow">
+      <div class="section-head">
+        <div class="section-eyebrow">Disease Detection</div>
+        <h2>Scan your crop</h2>
+        <p>Upload a photo of an infected leaf for an instant diagnosis.</p>
+      </div>
+
+      <div class="upload-area" id="uploadArea">
+        <!-- Default state -->
+        <div class="upload-default" id="uploadDefault">
+          <div class="upload-illustration">
+            <div class="ring"></div>
+            <i class="fas fa-cloud-arrow-up"></i>
+          </div>
+          <h3>Drop your crop photo here</h3>
+          <p class="sub">or click to browse your device</p>
+          <div class="format-pills">
+            <span class="format-pill">JPG</span>
+            <span class="format-pill">PNG</span>
+            <span class="format-pill">WEBP</span>
+            <span class="format-pill">Max 10MB</span>
+          </div>
+        </div>
+
+        <!-- Preview state -->
+        <div class="preview-state" id="previewState">
+          <div class="preview-img-wrap">
+            <img id="previewImg" src="" alt="Preview">
+          </div>
+          <div class="preview-meta">
+            <i class="fas fa-image"></i>
+            <div>
+              <div class="name" id="fileName">photo.jpg</div>
+              <div class="size" id="fileSize">2.1 MB</div>
+            </div>
+          </div>
+          <button class="btn btn-green" id="analyzeBtn" onclick="startScan()">
+            <i class="fas fa-magnifying-glass"></i> Analyze Crop
+          </button>
+        </div>
+
+        <!-- Scanning state -->
+        <div class="scanning-state" id="scanState">
+          <div class="scan-visual">
+            <img id="scanImg" src="" alt="Scanning">
+            <div class="scan-beam"></div>
+            <div class="scan-grid-overlay"></div>
+          </div>
+          <div class="scan-progress-track">
+            <div class="scan-progress-fill" id="progressFill"></div>
+          </div>
+          <div class="scan-text">
+            <span id="scanMsg">Preparing image</span>
+            <span class="dots"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+      </div>
+
+      <input type="file" id="fileInput" accept="image/*" hidden>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="results-section" id="results">
+    <div class="container">
+      <div class="result-header">
+        <div class="check-circle"><i class="fas fa-check"></i></div>
+        <h2>Diagnosis complete</h2>
+        <p>Here's what we found and what to do next.</p>
+      </div>
+
+      <div class="diagnosis-box" id="diagnosisBox">
+        <div class="diagnosis-top">
+          <div class="diagnosis-icon" id="dIcon">🦠</div>
+          <div class="diagnosis-info">
+            <h3 id="dName">Late Blight</h3>
+            <div class="latin" id="dCrop">Potato / Tomato — Phytophthora infestans</div>
+          </div>
+          <span class="severity-chip high" id="dSeverity">High Severity</span>
+        </div>
+
+        <div class="confidence-row">
+          <div class="confidence-labels">
+            <span>Confidence</span>
+            <span id="dConf">94%</span>
+          </div>
+          <div class="confidence-track">
+            <div class="confidence-fill" id="confFill"></div>
+          </div>
+        </div>
+
+        <p class="diagnosis-desc" id="dDesc">
+          Late blight is a potentially devastating disease of tomato and potato, caused by the fungus-like organism <em>Phytophthora infestans</em>. It spreads rapidly in cool, wet conditions and can destroy entire fields within days if left untreated.
+        </p>
+      </div>
+
+      <div class="advice-title"><i class="fas fa-clipboard-list"></i> Recommended Actions</div>
+
+      <div class="advice-grid" id="adviceGrid">
+        <div class="advice-card fade-up">
+          <div class="advice-card-head">
+            <div class="advice-card-icon treat"><i class="fas fa-pills"></i></div>
+            <h4>Treatment</h4>
+          </div>
+          <ul class="advice-list" id="adviceTreat"></ul>
+        </div>
+        <div class="advice-card fade-up d1">
+          <div class="advice-card-head">
+            <div class="advice-card-icon prevent"><i class="fas fa-shield-halved"></i></div>
+            <h4>Prevention</h4>
+          </div>
+          <ul class="advice-list" id="advicePrevent"></ul>
+        </div>
+        <div class="advice-card fade-up d2">
+          <div class="advice-card-head">
+            <div class="advice-card-icon feed"><i class="fas fa-seedling"></i></div>
+            <h4>Nutrition</h4>
+          </div>
+          <ul class="advice-list" id="adviceFeed"></ul>
+        </div>
+        <div class="advice-card fade-up d3">
+          <div class="advice-card-head">
+            <div class="advice-card-icon water"><i class="fas fa-droplet"></i></div>
+            <h4>Watering</h4>
+          </div>
+          <ul class="advice-list" id="adviceWater"></ul>
+        </div>
+      </div>
+
+      <div class="reset-wrap">
+        <button class="btn btn-outline" onclick="resetAll()">
+          <i class="fas fa-arrow-rotate-left"></i> Scan Another Crop
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-eyebrow">Why KisanAI</div>
+        <h2>Built for the field, not the lab</h2>
+        <p>Tools that actually help farmers, not just impress investors.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-card-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Instant diagnosis</h3>
+          <p>Results in under 10 seconds. No labs, no waiting — just your phone camera.</p>
+        </div>
+        <div class="feature-card fade-up d1">
+          <div class="feature-card-icon"><i class="fas fa-brain"></i></div>
+          <h3>Trained on real data</h3>
+          <p>Over 100,000 images of real crop diseases across 50+ crops and counting.</p>
+        </div>
+        <div class="feature-card fade-up d2">
+          <div class="feature-card-icon"><i class="fas fa-language"></i></div>
+          <h3>Speaks your language</h3>
+          <p>Advice in Hindi, Marathi, Tamil, Telugu, and 10+ regional languages.</p>
+        </div>
+        <div class="feature-card fade-up d3">
+          <div class="feature-card-icon"><i class="fas fa-wifi-slash"></i></div>
+          <h3>Works offline</h3>
+          <p>Core detection runs on-device. Sync when you're back in range.</p>
+        </div>
+        <div class="feature-card fade-up d4">
+          <div class="feature-card-icon"><i class="fas fa-clock-rotate-left"></i></div>
+          <h3>Scan history</h3>
+          <p>Track every scan over the season. Spot trends before they become problems.</p>
+        </div>
+        <div class="feature-card fade-up d5">
+          <div class="feature-card-icon"><i class="fas fa-user-doctor"></i></div>
+          <h3>Expert connect</h3>
+          <p>Reach local agricultural officers and KVK experts for complex cases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <section class="ticker-section">
+    <div class="ticker-track">
+      <div class="ticker-item"><span class="emoji">🌾</span> Wheat</div>
+      <div class="ticker-item"><span class="emoji">🍚</span> Rice</div>
+      <div class="ticker-item"><span class="emoji">🌽</span> Maize</div>
+      <div class="ticker-item"><span class="emoji">🥔</span> Potato</div>
+      <div class="ticker-item"><span class="emoji">🍅</span> Tomato</div>
+      <div class="ticker-item"><span class="emoji">🌶️</span> Chili</div>
+      <div class="ticker-item"><span class="emoji">🥒</span> Cucumber</div>
+      <div class="ticker-item"><span class="emoji">🫛</span> Soybean</div>
+      <div class="ticker-item"><span class="emoji">🧅</span> Onion</div>
+      <div class="ticker-item"><span class="emoji">🍇</span> Grapes</div>
+      <div class="ticker-item"><span class="emoji">🍎</span> Apple</div>
+      <div class="ticker-item"><span class="emoji">🍊</span> Orange</div>
+      <div class="ticker-item"><span class="emoji">🥭</span> Mango</div>
+      <div class="ticker-item"><span class="emoji">🍌</span> Banana</div>
+      <div class="ticker-item"><span class="emoji">🌿</span> Cotton</div>
+      <div class="ticker-item"><span class="emoji">☕</span> Coffee</div>
+      <!-- duplicate for seamless loop -->
+      <div class="ticker-item"><span class="emoji">🌾</span> Wheat</div>
+      <div class="ticker-item"><span class="emoji">🍚</span> Rice</div>
+      <div class="ticker-item"><span class="emoji">🌽</span> Maize</div>
+      <div class="ticker-item"><span class="emoji">🥔</span> Potato</div>
+      <div class="ticker-item"><span class="emoji">🍅</span> Tomato</div>
+      <div class="ticker-item"><span class="emoji">🌶️</span> Chili</div>
+      <div class="ticker-item"><span class="emoji">🥒</span> Cucumber</div>
+      <div class="ticker-item"><span class="emoji">🫛</span> Soybean</div>
+      <div class="ticker-item"><span class="emoji">🧅</span> Onion</div>
+      <div class="ticker-item"><span class="emoji">🍇</span> Grapes</div>
+      <div class="ticker-item"><span class="emoji">🍎</span> Apple</div>
+      <div class="ticker-item"><span class="emoji">🍊</span> Orange</div>
+      <div class="ticker-item"><span class="emoji">🥭</span> Mango</div>
+      <div class="ticker-item"><span class="emoji">🍌</span> Banana</div>
+      <div class="ticker-item"><span class="emoji">🌿</span> Cotton</div>
+      <div class="ticker-item"><span class="emoji">☕</span> Coffee</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Your crops can't wait. <span class="serif" style="font-style:italic;">Neither should you.</span></h2>
+    <p>One photo is all it takes to know exactly what's wrong and how to fix it.</p>
+    <a href="#scan" class="btn btn-white"><i class="fas fa-camera"></i> Scan Your First Crop</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">🌱 KisanAI</div>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="footer-copy">© 2026 KisanAI. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <i class="fas fa-circle-check"></i>
+    <span id="toastText">Done</span>
+  </div>
+
+  <script>
+    // ============================
+    // NAV SCROLL
+    // ============================
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ============================
+    // MOBILE MENU
+    // ============================
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // ============================
+    // SCROLL REVEAL
+    // ============================
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // ============================
+    // COUNTER ANIMATION
+    // ============================
+    const countEls = document.querySelectorAll('[data-count]');
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = +el.dataset.count;
+        const suffix = el.dataset.suffix || '+';
+        let cur = 0;
+        const step = target / 50;
+        const id = setInterval(() => {
+          cur += step;
+          if (cur >= target) { cur = target; clearInterval(id); }
+          el.textContent = Math.floor(cur) + suffix;
+        }, 30);
+        countObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    countEls.forEach(el => countObs.observe(el));
+
+    // ============================
+    // FILE UPLOAD
+    // ============================
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('fileInput');
+    const uploadDefault = document.getElementById('uploadDefault');
+    const previewState = document.getElementById('previewState');
+    const previewImg = document.getElementById('previewImg');
+    const scanImg = document.getElementById('scanImg');
+
+    uploadArea.addEventListener('click', (e) => {
+      if (!e.target.closest('.btn')) fileInput.click();
+    });
+
+    uploadArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadArea.classList.add('drag-over');
+    });
+
+    uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+
+    uploadArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadArea.classList.remove('drag-over');
+      const f = e.dataTransfer.files[0];
+      if (f && f.type.startsWith('image/')) loadFile(f);
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files[0]) loadFile(e.target.files[0]);
+    });
+
+    function loadFile(file) {
+      const r = new FileReader();
+      r.onload = (e) => {
+        previewImg.src = e.target.result;
+        scanImg.src = e.target.result;
+        document.getElementById('fileName').textContent = file.name;
+        document.getElementById('fileSize').textContent = (file.size / 1048576).toFixed(1) + ' MB';
+        uploadDefault.style.display = 'none';
+        previewState.classList.add('active');
+        uploadArea.classList.add('has-file');
+        document.getElementById('results').classList.remove('active');
+      };
+      r.readAsDataURL(file);
+    }
+
+    // ============================
+    // SCAN
+    // ============================
+    function startScan() {
+      previewState.classList.remove('active');
+      document.getElementById('scanState').classList.add('active');
+
+      const fill = document.getElementById('progressFill');
+      fill.style.transition = 'none';
+      fill.style.width = '0%';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          fill.style.transition = 'width 3s ease-out';
+          fill.style.width = '100%';
+        });
+      });
+
+      const msgs = ['Preprocessing image', 'Detecting leaf patterns', 'Analyzing markers', 'Building diagnosis', 'Finalizing report'];
+      let i = 0;
+      const msgEl = document.getElementById('scanMsg');
+      const tid = setInterval(() => {
+        if (i < msgs.length) msgEl.textContent = msgs[i++];
+      }, 550);
+
+      setTimeout(() => {
+        clearInterval(tid);
+        document.getElementById('scanState').classList.remove('active');
+        showResults();
+      }, 3000);
+    }
+
+    // ============================
+    // DISEASES DATA
+    // ============================
+    const diseases = [
+      {
+        name: 'Late Blight', icon: '🦠',
+        crop: 'Potato / Tomato — Phytophthora infestans',
+        severity: 'high', severityText: 'High Severity', confidence: 94,
+        desc: 'Late blight is a potentially devastating disease of tomato and potato, caused by the fungus-like organism <em>Phytophthora infestans</em>. It spreads rapidly in cool, wet conditions and can destroy entire fields within days if left untreated.',
+        treatment: ['Apply Mancozeb 75% WP (2g/L) immediately', 'Spray Copper Oxychloride (3g/L) as follow-up', 'Remove and destroy severely infected plants', 'Use Metalaxyl + Mancozeb for resistant strains'],
+        prevention: ['Ensure proper plant spacing for airflow', 'Switch to drip irrigation, avoid overhead watering', 'Rotate crops on a 3-year cycle', 'Plant disease-resistant varieties next season'],
+        nutrition: ['Apply balanced NPK (19:19:19) after recovery', 'Add Potassium to boost immunity', 'Use neem cake as organic soil amendment', 'Maintain soil pH between 5.5 and 6.5'],
+        water: ['Reduce watering frequency during outbreak', 'Water in early morning so leaves dry fast', 'Ensure drainage to prevent waterlogging', 'Mulch around base to reduce soil splash']
+      },
+      {
+        name: 'Powdery Mildew', icon: '🌫️',
+        crop: 'Wheat / Grapes — Erysiphe graminis',
+        severity: 'medium', severityText: 'Medium Severity', confidence: 91,
+        desc: 'Powdery mildew appears as white powdery spots on leaves and stems. It thrives in warm, dry conditions with high humidity and can significantly reduce crop yield if not managed early.',
+        treatment: ['Apply Sulfur-based fungicide (2g/L) at first sign', 'Use Carbendazim 50% WP (1g/L) for severe cases', 'Spray Tridemorph for systemic protection', 'Remove heavily infected plant parts immediately'],
+        prevention: ['Plant resistant varieties suited to your region', 'Maintain adequate spacing between plants', 'Avoid excessive nitrogen fertilization', 'Prune for better air circulation in vine crops'],
+        nutrition: ['Reduce nitrogen, increase phosphorus and potassium', 'Apply Silicon-based supplements for cell strength', 'Use organic compost for balanced nutrition', 'Foliar spray of neem oil (5ml/L) weekly'],
+        water: ['Avoid evening watering — keep foliage dry', 'Use drip irrigation at root zone only', 'Water in morning for quick evaporation', 'Reduce humidity around plant canopy']
+      },
+      {
+        name: 'Bacterial Leaf Blight', icon: '🍃',
+        crop: 'Rice — Xanthomonas oryzae',
+        severity: 'high', severityText: 'High Severity', confidence: 89,
+        desc: 'Bacterial leaf blight is one of the most serious diseases of rice. It causes yellowing and drying of leaves, leading to significant yield loss. The bacteria spread through contaminated water and wounds.',
+        treatment: ['Apply Streptocycline (0.1g/L) with Copper Oxychloride', 'Spray Bordeaux mixture (1%) for field application', 'Use Pseudomonas fluorescens as bio-control agent', 'Remove and burn infected plant debris after harvest'],
+        prevention: ['Use certified disease-free seeds', 'Practice crop rotation with non-rice crops', 'Avoid excessive nitrogen fertilizer', 'Plant resistant varieties recommended by local KVK'],
+        nutrition: ['Apply balanced fertilizer — avoid excess nitrogen', 'Add Zinc Sulphate (25kg/hectare) to soil', 'Use organic manure for soil health', 'Silicon application strengthens rice cell walls'],
+        water: ['Maintain proper water levels in paddy field', 'Drain field periodically to reduce bacterial spread', 'Avoid flooding during heavy rain', 'Use clean irrigation water sources']
+      }
+    ];
+
+    function showResults() {
+      const d = diseases[Math.floor(Math.random() * diseases.length)];
+
+      document.getElementById('dIcon').textContent = d.icon;
+      document.getElementById('dName').textContent = d.name;
+      document.getElementById('dCrop').textContent = d.crop;
+
+      const badge = document.getElementById('dSeverity');
+      badge.textContent = d.severityText;
+      badge.className = 'severity-chip ' + d.severity;
+
+      document.getElementById('dConf').textContent = d.confidence + '%';
+      document.getElementById('dDesc').innerHTML = d.desc;
+
+      // Fill advice lists
+      const map = {
+        adviceTreat: d.treatment,
+        advicePrevent: d.prevention,
+        adviceFeed: d.nutrition,
+        adviceWater: d.water
+      };
+      Object.entries(map).forEach(([id, items]) => {
+        document.getElementById(id).innerHTML = items.map(item =>
+          `<li><span class="check"><i class="fas fa-check"></i></span>${item}</li>`
+        ).join('');
+      });
+
+      const results = document.getElementById('results');
+      results.classList.add('active');
+
+      // Animate confidence bar
+      setTimeout(() => {
+        document.getElementById('confFill').style.width = d.confidence + '%';
+      }, 200);
+
+      // Trigger fade-up on new advice cards
+      setTimeout(() => {
+        results.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+      }, 100);
+
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      showToast('Detected: ' + d.name);
+    }
+
+    function resetAll() {
+      document.getElementById('results').classList.remove('active');
+      previewState.classList.remove('active');
+      document.getElementById('scanState').classList.remove('active');
+      uploadDefault.style.display = 'block';
+      uploadArea.classList.remove('has-file');
+      document.getElementById('confFill').style.width = '0%';
+      fileInput.value = '';
+      document.getElementById('scan').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ============================
+    // TOAST
+    // ============================
+    function showToast(text) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastText').textContent = text;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // ============================
+    // SMOOTH SCROLL
+    // ============================
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          document.getElementById('navLinks').classList.remove('active');
+        }
+      });
+    });
+  </script>
