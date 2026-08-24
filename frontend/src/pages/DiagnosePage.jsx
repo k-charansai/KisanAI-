@@ -38,9 +38,8 @@ export default function DiagnosePage() {
       const advRes = await getAdvisory(diagRes.disease, location);
       setAdvisoryData(advRes);
       
-    } catch (err) {
-      setError(true);
-    } finally {
+}
+     finally {
       setLoading(false);
     }
   };

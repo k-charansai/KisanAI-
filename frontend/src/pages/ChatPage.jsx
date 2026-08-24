@@ -19,14 +19,12 @@ export default function ChatPage() {
     setMessages(newMessages);
     setLoading(true);
 
-    try {
-      const res = await sendChatMessage(sessionId, text);
-      setMessages([...newMessages, { role: 'assistant', text: res.reply }]);
-    } catch (err) {
-      setMessages([...newMessages, { role: 'assistant', text: "Sorry, I'm having trouble connecting right now." }]);
-    } finally {
-      setLoading(false);
-    }
+try {
+    const res = await sendChatMessage(sessionId, text);
+    setMessages([...newMessages, { role: 'assistant', text: res.reply }]);
+  } finally {
+    setLoading(false);
+  }
   };
 
   return (

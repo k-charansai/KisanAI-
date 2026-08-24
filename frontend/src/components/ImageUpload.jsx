@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import styles from './ImageUpload.module.css';
 
-export default function ImageUpload({ file, setFile }) {
+export default function ImageUpload({ _file, setFile }) {
   const fileInputRef = useRef(null);
   const [preview, setPreview] = useState(null);
   const [dragActive, setDragActive] = useState(false);
