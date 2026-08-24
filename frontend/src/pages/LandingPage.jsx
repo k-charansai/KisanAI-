@@ -26,9 +26,7 @@ export default function LandingPage() {
 
   return (
     <>
-      {/* Navbar */}
-      <nav className={
-av }>
+      <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`} id="nav">
         <div className="nav-inner">
           <div className="nav-logo">
             <div className="nav-logo-mark">🌱</div>
