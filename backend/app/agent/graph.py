@@ -48,17 +48,17 @@ def viral_expert(state: AgentState): return generate_plan_with_llm(state, "Viral
 def nutritional_expert(state: AgentState): return generate_plan_with_llm(state, "Nutritional Expert")
 
 def generate_plan_with_llm(state: AgentState, role: str):
-    if not os.environ.get("GROQ_API_KEY"):
+    if not os.environ.get("GEMINI_API_KEY") and not os.environ.get("GOOGLE_API_KEY"):
         return {"plan": {
             "summary": "API Key missing. Cannot generate full advisory.",
-            "treatment_steps": ["1. Check API Key", "2. Ensure GROQ_API_KEY is in .env"],
+            "treatment_steps": ["1. Check API Key", "2. Ensure GEMINI_API_KEY is in .env"],
             "weather_note": "Unknown weather.",
             "estimated_cost_inr": "₹0 - ₹0",
             "follow_up": "Add the key to continue.",
             "disclaimer": "This is a placeholder."
         }}
 
-    llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0, max_retries=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0, max_retries=0)
     
     # RAG lookup
     retriever = get_retriever()
@@ -150,8 +150,8 @@ def generate_treatment_plan(diagnosis: str, location: str) -> dict:
 chat_sessions = {}
 
 def chat_with_agent(session_id: str, message: str) -> str:
-    if not os.environ.get("GROQ_API_KEY"):
-        return "I need a GROQ_API_KEY to chat."
+    if not os.environ.get("GEMINI_API_KEY") and not os.environ.get("GOOGLE_API_KEY"):
+        return "I need a GEMINI_API_KEY to chat."
         
     if session_id not in chat_sessions:
         chat_sessions[session_id] = [
@@ -161,7 +161,7 @@ def chat_with_agent(session_id: str, message: str) -> str:
     history = chat_sessions[session_id]
     history.append(HumanMessage(content=message))
     
-    llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.7)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.7)
     response = llm.invoke(history)
     
     history.append(AIMessage(content=response.content))

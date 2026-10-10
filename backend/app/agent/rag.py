@@ -33,7 +33,7 @@ def get_retriever():
             splits = text_splitter.split_documents(docs)
             
             # Embed
-            embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", max_retries=0)
+            embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", max_retries=0)
             _vectorstore = FAISS.from_documents(splits, embeddings)
         except Exception as e:
             print(f"Error building FAISS index (likely API key issue): {e}")
