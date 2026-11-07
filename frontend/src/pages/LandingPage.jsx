@@ -1,11 +1,17 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import SylvaHero from '../components/SylvaHero';
 import './LandingPage.css';
 import farmerImg from '../assets/farmer-planting-seedling.jpg';
 import riceImg from '../assets/farmers-rice-field.jpg';
 
 export default function LandingPage() {
+  const navigate = useNavigate();
+
+  const handleScanClick = () => {
+    navigate('/diagnose');
+  };
+
   return (
     <>
       <SylvaHero />
